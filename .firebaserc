@@ -1,9 +1,0 @@
-{
-  "projects": {
-    "default": "black-market-313d0",
-    "privacy": "black-market-313d0"
-  },
-  "targets": {},
-  "etags": {},
-  "dataconnectEmulatorConfig": {}
-}

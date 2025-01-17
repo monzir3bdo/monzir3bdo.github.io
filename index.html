@@ -2,54 +2,244 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Black Market App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monzir Abdalrahman - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #101010;
+            color: #eaeaea;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.8rem;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        header .cta {
+            margin-top: 2.5rem;
+            animation: fadeInUp 2.5s ease-in-out;
+        }
+
+        header .cta a {
+            text-decoration: none;
+            color: #fff;
+            background: #e63946;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        header .cta a:hover {
+            background: #f3722c;
+            transform: scale(1.05);
+        }
+
+        section {
+            margin: 60px 0;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: #181818;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #e63946;
+            margin: 0.5rem auto 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        ul li {
+            flex: 1 1 calc(30% - 20px);
+            background: #242424;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: translateY(-10px);
+            background: #e63946;
+            color: #fff;
+        }
+
+        ul li a {
+            color: #e63946;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        ul li a:hover {
+            color: #f3722c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #181818;
+            color: #fff;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #e63946;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #f3722c;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            ul li {
+                flex: 1 1 calc(50% - 20px);
+            }
+
+            header h1 {
+                font-size: 3rem;
+            }
+
+            header p {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <div class="header-container">
-            <img src="logo.png" alt="Black Market Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#download" class="btn">Download Now</a>
+        <h1>Monzir Abdalrahman</h1>
+        <p>Flutter Developer | Riyadh, Saudi Arabia</p>
+        <div class="cta">
+            <a href="#contact">Contact Me</a>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <h1>Your Ultimate Financial Guide</h1>
-        <p>Stay informed with real-time SDG prices, gold rates, and instant currency conversions.</p>
-        <a href="#download" class="hero-btn">Get the App Now</a>
-    </section>
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a dedicated Flutter developer with expertise in building responsive, high-performance mobile applications. My goal is to deliver outstanding solutions while maintaining clean and maintainable codebases.</p>
+        </section>
 
-    <!-- Additional sections like features, benefits, testimonials, download, etc. -->
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Dart & Flutter</li>
+                <li>State Management (Bloc, Riverpod)</li>
+                <li>API Integration</li>
+                <li>Firebase</li>
+                <li>Custom UI/UX Design</li>
+                <li>Version Control (Git)</li>
+                <li>Agile Methodologies</li>
+                <li>CI/CD</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Whatsapp Direct Message</strong><br>Allows users to send WhatsApp messages without saving contacts. <a href="#">View on GitHub</a></li>
+                <li><strong>E-Commerce App</strong><br>Features user authentication, product catalog, and filtering. <a href="#">View on GitHub</a></li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:monzir3bdo@gmail.com">monzir3bdo@gmail.com</a></p>
+            <p>Social: <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
+        </section>
+    </div>
 
     <footer>
-        <div class="footer-container">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="social-media">
-                <!-- Social media icons here -->
-            </div>
-            <p>Contact Us: support@blackmarketapp.com | Phone: +1-800-123-4567</p>
-            <p>&copy; 2023 Black Market. All rights reserved.</p>
-        </div>
+        &copy; 2025 Monzir Abdalrahman. All Rights Reserved.
     </footer>
 </body>
 </html>
