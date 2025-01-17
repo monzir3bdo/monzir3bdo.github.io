@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monzir Abdalrahman - Flutter Mobile Developer</title>
+    <!-- Add Poppins font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        section {
+            margin: 60px 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+
+        .about, .skills, .projects, .work-history, .education, .languages, .hobbies {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about:hover, .skills:hover, .projects:hover, .work-history:hover, .education:hover, .languages:hover, .hobbies:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .skills ul, .projects ul, .work-history ul, .education ul, .languages ul, .hobbies ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skills ul li, .projects ul li, .work-history ul li, .education ul li, .languages ul li, .hobbies ul li {
+            background: #f1f1f1;
+            margin: 0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            flex: 1 1 calc(33.333% - 30px);
+            text-align: center;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .skills ul li:hover, .projects ul li:hover, .work-history ul li:hover, .education ul li:hover, .languages ul li:hover, .hobbies ul li:hover {
+            background: #3498db;
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        .projects ul li a, .contact a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .projects ul li a:hover, .contact a:hover {
+            color: #2980b9;
+        }
+
+        .contact p {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: #fff;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .skills ul li, .projects ul li, .work-history ul li, .education ul li, .languages ul li, .hobbies ul li {
+                flex: 1 1 calc(50% - 30px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Monzir Abdalrahman</h1>
+        <p>Flutter Mobile Developer | Riyadh, Saudi Arabia | +966 543659079 | monzir3bdo@gmail.com | <a href="https://github.com/yourusername" target="_blank" style="color: #fff; text-decoration: none;">GitHub</a></p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section class="about">
+            <h2>Career Summary</h2>
+            <p>
+                I am a dedicated Flutter developer and freelancer with extensive experience in designing, developing, and deploying high-quality mobile applications. My expertise lies in creating seamless, responsive, and user-friendly applications tailored to clients' unique needs. I have successfully delivered numerous projects, collaborating with diverse teams and clients to bring innovative ideas to life. My passion for technology and commitment to continuous learning drive my success in the ever-evolving field of mobile app development.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills and Strengths</h2>
+            <ul>
+                <li>Dart & Flutter framework</li>
+                <li>State management (Bloc, Riverpod)</li>
+                <li>API Integration (RESTFUL APIs, GraphQL)</li>
+                <li>Firebase</li>
+                <li>Local Storage</li>
+                <li>Custom UI/UX design</li>
+                <li>Third-party libraries and APIs</li>
+                <li>Version control with Git</li>
+                <li>Agile methodologies</li>
+                <li>Cross-platform development</li>
+                <li>Testing</li>
+                <li>Design Patterns</li>
+                <li>Problem Solving Skills</li>
+                <li>CI/CD</li>
+                <li>Clean Code</li>
+            </ul>
+        </section>
+
+        <!-- Professional Accomplishments Section -->
+        <section class="projects">
+            <h2>Professional Accomplishments</h2>
+            <ul>
+                <li>
+                    <strong>Iktifaa App</strong> - Participated in the development of a large-scale application, contributing to various stages of the software development lifecycle. Collaborated with cross-functional teams to ensure high-quality deliverables.
+                    <br>Available on: <a href="#" target="_blank">Play Store</a> | <a href="#" target="_blank">App Store</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Work History Section -->
+        <section class="work-history">
+            <h2>Work History</h2>
+            <ul>
+                <li>
+                    <strong>Roya Dot, Remote</strong> - Flutter Developer (12/2023 - 04/2024)
+                    <br>At Roya, as a Flutter developer working remotely, my role revolves around translating creative visions into tangible digital experiences. Collaborating closely with the creative team, I transform UI designs into functional code, breathing life into applications that seamlessly blend elegance and functionality. With meticulous craftsmanship, I bridge the gap between imagination and reality, shaping the future of digital innovation one line of code at a time. We have developed several MVP applications for our shareholders, which have not been launched yet.
+                </li>
+                <li>
+                    <strong>Flutter Developer Freelancer</strong> (05/2023 - Present)
+                    <br>In my freelance work, I assist clients by adding custom functionality to their apps, tailoring solutions to meet specific needs and enhance user experiences. Additionally, I have developed an MVP for a customer, demonstrating my ability to deliver effective, innovative solutions independently.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>University of Khartoum</strong> - Not Graduated (3rd Year), Faculty of Mathematical Science and Informatics, Sudan
+                </li>
+            </ul>
+        </section>
+
+        <!-- Languages Section -->
+        <section class="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>Arabic (Native)</li>
+                <li>English (Professional)</li>
+            </ul>
+        </section>
+
+        <!-- Personal Projects Section -->
+        <section class="projects">
+            <h2>Personal Projects</h2>
+            <ul>
+                <li>
+                    <strong>Whatsapp Direct Message</strong> - Role: App Developer & UI/UX Designer. Designed and developed a mobile app that allows users to send WhatsApp messages without saving contacts, including creating Figma prototypes and implementing smooth, API-integrated functionality.
+                    <br>Available on: <a href="#" target="_blank">Play Store</a> | <a href="#" target="_blank">GitHub</a>
+                </li>
+                <li>
+                    <strong>E-Commerce App</strong> - This e-commerce app provides a seamless shopping experience with essential features including user authentication, a comprehensive product catalog, and advanced filtering options. Users can easily sign up and log in to access their accounts, browse a diverse range of products, and use intuitive filters to find exactly what they’re looking for. Designed for both functionality and ease of use, this app enhances the shopping journey with a smooth interface and efficient performance.
+                    <br>Available on: <a href="#" target="_blank">GitHub</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Additional Skills Section -->
+        <section class="skills">
+            <h2>Additional Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js/Express</li>
+                <li>Knowledge of: C++, Python</li>
+                <li>Figma</li>
+                <li>Linux</li>
+            </ul>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section class="hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Chess</li>
+                <li>Football</li>
+                <li>Learning New Technologies</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <p>
+                If you'd like to collaborate or have any questions, feel free to reach out to me at:
+                <a href="mailto:monzir3bdo@gmail.com">monzir3bdo@gmail.com</a>.
+            </p>
+            <p>
+                You can also find me on:
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> |
+                <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+            </p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2023 Monzir Abdalrahman. All rights reserved.
+    </footer>
+</body>
+</html>
