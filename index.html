@@ -334,6 +334,7 @@
 
         /* Scroll Down Indicator */
         .scroll-down {
+            cursor: pointer;
             position: absolute;
             bottom: 40px;
             left: 50%;
@@ -541,7 +542,7 @@
         .skill-card {
             background-color: rgba(31, 41, 55, 0.7);
             padding: 25px;
-            border-radius: A10px;
+            border-radius: 10px;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all var(--transition-normal) ease;
@@ -1770,16 +1771,74 @@
     }
 
     // Document ready
-    document.addEventListener('DOMContentLoaded', function() {
-        createParticles();
-        setupTypingEffect();
-        initSkillBars();
-        setupMobileMenu();
-        setupContactForm();
+    // Add this function to handle all navigation buttons
+    function setupNavigationButtons() {
+        // Handle all navigation links including buttons with href="#section"
+        const navLinks = document.querySelectorAll('a[href^="#"]');
 
-        // Scroll event for navbar
-        window.addEventListener('scroll', handleNavbarScroll);
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    }
+
+    // Replace both DOMContentLoaded listeners with this single one
+// Delete all three of your current DOMContentLoaded event listeners
+// and replace with this single one
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all components
+    createParticles();
+    setupTypingEffect();
+    initSkillBars();
+    setupMobileMenu();
+    setupContactForm();
+    setupScrollDown();
+    setupNavigationButtons();
+
+    // Scroll event for navbar
+    window.addEventListener('scroll', handleNavbarScroll);
+});
+
+// Make sure you have this function defined
+function setupNavigationButtons() {
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Skip links with just '#'
+
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     });
+}
+    // Setup scroll down functionality
+    function setupScrollDown() {
+        const scrollDownBtn = document.querySelector('.scroll-down');
+        const aboutSection = document.getElementById('about');
+
+        scrollDownBtn.addEventListener('click', () => {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
+    // Add this to the document ready section
+
+
 </script>
 </body>
 </html>
