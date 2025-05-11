@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -823,7 +824,62 @@ function setupNavigationButtons() {
 
     // Add this to the document ready section
 
+        // Fix for buttons becoming unclickable after first interaction
+        document.addEventListener('DOMContentLoaded', function() {
+        // Function to ensure buttons remain clickable
+        function ensureClickable() {
+            // Get all buttons and links in the hero section
+            const heroButtons = document.querySelectorAll('.hero-cta a, .social-links a');
+
+            // For each button, ensure it remains clickable
+            heroButtons.forEach(button => {
+                // Remove any existing click listeners that might interfere
+                const newButton = button.cloneNode(true);
+                button.parentNode.replaceChild(newButton, button);
+
+                // Add a clean click handler that preserves the link's functionality
+                newButton.addEventListener('click', function(e) {
+                    // Only prevent default if it's not an actual link
+                    if (this.getAttribute('href') === '#' || this.getAttribute('href') === '') {
+                        e.preventDefault();
+                    }
+
+                    // If it's a scroll link (starts with #), handle smooth scrolling
+                    if (this.getAttribute('href').startsWith('#')) {
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+
+                    // Re-apply clickable fix after a short delay (in case anything interferes)
+                    setTimeout(ensureClickable, 100);
+                });
+            });
+        }
+
+        // Run initially
+        ensureClickable();
+
+        // Also run whenever the page is interacted with
+        document.addEventListener('click', function() {
+        setTimeout(ensureClickable, 100);
+    });
+
+        // Fix for any particles or animations that might be interfering
+        const particlesElement = document.getElementById('particles');
+        if (particlesElement) {
+        particlesElement.style.pointerEvents = 'none';
+    }
+
+        // Make sure all possible overlay elements don't block clicks
+        const potentialOverlays = document.querySelectorAll('.hero-particles, .overlay, .modal-backdrop');
+        potentialOverlays.forEach(overlay => {
+        overlay.style.pointerEvents = 'none';
+    });
+    });
+
 
 </script>
-</body>
-</html>
