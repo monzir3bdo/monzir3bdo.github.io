@@ -23,7 +23,28 @@
     --transition-normal: 0.3s;
     --transition-slow: 0.5s;
 }
+    /* Fix for timeline date overlapping title on smaller screens */
+    @media (max-width: 992px) {
+        .timeline-date {
+            position: relative;
+            top: 0;
+            width: auto;
+            text-align: left !important;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-weight: 600;
+            display: block;
+        }
 
+        .timeline-content {
+            padding-top: 50px;
+            padding-right: 10px;
+        }
+
+        .timeline-title {
+            margin-top: 10px;
+        }
+    }
 /* Reset & General Styles */
 * {
     margin: 0;
@@ -465,6 +486,37 @@ section {
 .timeline-item:nth-child(odd) .timeline-content {
     margin-left: auto;
 }
+    /* Fix for timeline date overlapping title in the first card */
+    .timeline-item:first-child .timeline-date {
+        position: relative;
+        top: 0;
+        width: auto;
+        text-align: left !important;
+        margin-bottom: 10px;
+        left: 0 !important;
+        right: auto !important;
+    }
+
+    .timeline-item:first-child .timeline-content {
+        padding-top: 15px;
+    }
+
+    /* Ensure consistent styling for all timeline items on mobile */
+    @media (max-width: 992px) {
+        .timeline-item .timeline-date {
+            position: relative;
+            top: 0;
+            width: auto;
+            text-align: left !important;
+            margin-bottom: 10px;
+            left: 0 !important;
+            right: auto !important;
+        }
+
+        .timeline-item .timeline-content {
+            padding-top: 15px;
+        }
+    }
 
 .timeline-item::before {
     content: '';
