@@ -576,8 +576,10 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    justify-items: center;
+    margin-top:20px;
 }
 
 .skill-card {
@@ -587,6 +589,8 @@ section {
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all var(--transition-normal) ease;
+    width: 280px;
+
 }
 
 .skill-card:hover {
