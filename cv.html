@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Monzir - Flutter Developer</title>
+    <style>
+        :root {
+            --primary-color: #0A66C2;
+            --secondary-color: #333333;
+            --text-color: #333;
+            --background-color: #ffffff;
+            --light-background: #f5f7f9;
+            --border-color: #eaeaea;
+            --highlight-color: #0077b5;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--background-color);
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 1.75rem;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            font-weight: 600;
+            background-color: var(--light-background);
+        }
+
+        tr:hover {
+            background-color: var(--light-background);
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .project {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .project-description {
+            margin-bottom: 1rem;
+        }
+
+        .work-experience {
+            margin-bottom: 2rem;
+        }
+
+        .work-company {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .work-duration {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header {
+            margin-bottom: 2.5rem;
+        }
+
+        .header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .header-subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>CV Monzir</h1>
+        <div class="header-subtitle">Flutter Developer</div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📍 Riyadh, Saudi Arabia</span>
+            </div>
+            <div class="contact-item">
+                <span>📱 +966 570251749</span>
+            </div>
+            <div class="contact-item">
+                <span>📧 monzir3bdo@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span>🌐 <a href="https://monzir3bdo.com" target="_blank">monzir3bdo.com</a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2># Intro</h2>
+        <p>I am an <strong>innovative Flutter developer</strong> with proven expertise in designing, developing, and deploying high-quality mobile applications across iOS and Android platforms [1]. With a demonstrated ability to lead mobile development projects while handling both frontend and backend components, I specialize in translating business requirements into elegant technical solutions [10]. My track record includes <strong>successfully launched applications now available on major app stores</strong>, combining strong technical proficiency with creative problem-solving to deliver intuitive, responsive, and user-friendly applications that exceed client expectations [1].</p>
+
+        <p><strong>Creator of Black Market SD</strong>, a comprehensive financial application providing currency exchange rates and economic indicators, available on both Google Play and App Store [1]. <strong>Developer of Dentaix Mobile App</strong>, a complete dental practice management solution for healthcare professionals [10]. <strong>Freelance Flutter specialist</strong> helping clients enhance their applications with custom functionality and innovative solutions [1]. <strong>Experienced in full-stack development</strong> from mobile frontend to backend implementation, with expertise in modern state management, cloud services, and responsive design principles [10].</p>
+
+        <p>My development philosophy centers on <strong>clean architecture and maintainable code</strong>, ensuring applications remain scalable and adaptable to evolving business needs [10]. I bring a unique combination of technical excellence and business awareness to every project, focusing on delivering solutions that not only meet technical specifications but also drive tangible business growth through enhanced user engagement and operational efficiency [1]. As technology continues to evolve, I remain committed to staying at the forefront of mobile development best practices, continuously expanding my skillset to embrace emerging tools and frameworks [10].</p>
+    </div>
+
+    <div class="section">
+        <h2># Technical Skills</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Technologies</th>
+            </tr>
+            <tr>
+                <td>Mobile Development</td>
+                <td>Flutter, Dart, iOS & Android deployment, Cross-platform development, Native platform integration</td>
+            </tr>
+            <tr>
+                <td>State Management</td>
+                <td>Bloc pattern, Riverpod, Provider, GetX, Redux, MobX</td>
+            </tr>
+            <tr>
+                <td>Backend & APIs</td>
+                <td>RESTful APIs, GraphQL, Firebase services, Node.js/Express, API architecture</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>Cloud Firestore, MongoDB, SQLite, Hive, Shared Preferences, Realm</td>
+            </tr>
+            <tr>
+                <td>UI/UX Design</td>
+                <td>Custom UI design, Figma prototyping, Material Design, Animations</td>
+            </tr>
+            <tr>
+                <td>DevOps & Tools</td>
+                <td>Git, GitHub, CI/CD pipelines, Docker, Firebase hosting</td>
+            </tr>
+            <tr>
+                <td>Architecture</td>
+                <td>Clean Architecture, MVVM, MVC, Design Patterns, SOLID principles</td>
+            </tr>
+            <tr>
+                <td>Programming</td>
+                <td>Dart, JavaScript, Python, C++, HTML/CSS, SQL</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2># Professional Experience</h2>
+
+        <div class="work-experience">
+            <h3>Flutter Developer Freelancer</h3>
+            <div class="work-company">Remote</div>
+            <div class="work-duration">05.2023 - Present</div>
+            <p>In my freelance work, I assist clients by adding custom functionality to their apps, tailoring solutions to meet specific needs and enhance user experiences [1]. I have developed MVPs for customers, demonstrating my ability to deliver effective, innovative solutions independently [10].</p>
+            <ul>
+                <li>Developed custom modules and features for existing Flutter applications [1]</li>
+                <li>Provided technical consulting and mentoring for mobile development teams [15] [16]</li>
+                <li>Implemented advanced state management solutions for complex applications [10]</li>
+                <li>Created cross-platform solutions that maintain native performance and feel [17]</li>
+                <li>Integrated third-party services and APIs to enhance application functionality [10]</li>
+            </ul>
+        </div>
+
+        <div class="work-experience">
+            <h3>Flutter Developer</h3>
+            <div class="work-company">Roya Dot, Remote</div>
+            <div class="work-duration">12.2023 - 04.2024</div>
+            <p>At Roya, as a Flutter developer working remotely, my role revolved around translating creative visions into tangible digital experiences [1]. Collaborating closely with the creative team, I transformed UI designs into functional code, breathing life into applications that seamlessly blend elegance and functionality [10]. With meticulous craftsmanship, I bridged the gap between imagination and reality, shaping the future of digital innovation one line of code at a time [1].</p>
+            <ul>
+                <li>Collaborated with cross-functional teams to develop innovative mobile applications [16]</li>
+                <li>Implemented responsive UI designs following Material Design guidelines [10]</li>
+                <li>Developed custom animations and interactive elements to enhance user experience [17]</li>
+                <li>Participated in code reviews and quality assurance processes [15]</li>
+                <li>Optimized application performance and reduced loading times [10]</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2># Key Projects</h2>
+
+        <div class="project">
+            <div class="project-title">Black Market SD</div>
+            <div class="project-description">
+                <p>A comprehensive financial application providing currency exchange rates and economic indicators for Sudan, with complex data visualization and real-time updates [1] [10].</p>
+                <ul>
+                    <li>Led mobile development while handling backend implementation and contributing to app design [1]</li>
+                    <li>Built a comprehensive financial application providing currency exchange rates and economic indicators [10]</li>
+                    <li>Implemented complex data visualization features and real-time updates [1]</li>
+                    <li>Managed the entire development lifecycle from concept to successful deployment on both iOS and Android platforms [10]</li>
+                    <li>Available on: Google Play and App Store [1]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Dentaix Mobile App</div>
+            <div class="project-description">
+                <p>A complete dental practice management mobile application with user authentication, appointment scheduling, and patient management features [1] [10].</p>
+                <ul>
+                    <li>Developed a complete dental practice management mobile application for both iOS and Android [1]</li>
+                    <li>Implemented user authentication, appointment scheduling, and patient management features [10]</li>
+                    <li>Designed intuitive UI/UX for optimal user experience in healthcare context [1]</li>
+                    <li>Available on: Google Play and App Store [10]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">WhatsApp Direct Message</div>
+            <div class="project-description">
+                <p>An app that allows users to send WhatsApp messages without saving contacts, with a clean UI and smooth functionality [1] [10].</p>
+                <ul>
+                    <li>Role: App Developer & UI/UX Designer [1]</li>
+                    <li>Designed and developed a mobile app that allows users to send WhatsApp messages without saving contacts [10]</li>
+                    <li>Created Figma prototypes and implemented smooth, API-integrated functionality [1]</li>
+                    <li>Available on: Play Store and GitHub [10]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">E-Commerce App</div>
+            <div class="project-description">
+                <p>A full-featured e-commerce app with user authentication, comprehensive product catalog, and advanced filtering options for an enhanced shopping experience [1] [10].</p>
+                <ul>
+                    <li>Built a seamless shopping experience with essential features including user authentication [10]</li>
+                    <li>Implemented a comprehensive product catalog with advanced filtering options [1]</li>
+                    <li>Designed for both functionality and ease of use with a smooth interface and efficient performance [10]</li>
+                    <li>Available on: GitHub [1]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2># Education & Training</h2>
+        <h3>University of Khartoum</h3>
+        <p>Faculty of Mathematical Science and Informatics, Sudan (3rd Year) [1]</p>
+        <p>Pursuing a degree with focus on computer science and mathematics, building a strong foundation in algorithmic thinking and problem-solving [10].</p>
+    </div>
+
+    <div class="section">
+        <h2># Languages</h2>
+        <ul>
+            <li><strong>Arabic:</strong> Native [1]</li>
+            <li><strong>English:</strong> Professional [1]</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2># Personal Interests</h2>
+        <ul>
+            <li><strong>Chess:</strong> Strategic thinking and problem-solving [1]</li>
+            <li><strong>Football:</strong> Team collaboration and competitive spirit [1]</li>
+            <li><strong>Learning New Technologies:</strong> Continuous professional development and staying at the cutting edge of mobile development [10]</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        <p>Last updated: June 16, 2025</p>
+    </div>
+</div>
+</body>
+</html>

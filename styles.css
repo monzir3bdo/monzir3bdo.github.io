@@ -579,7 +579,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     justify-items: center;
-    margin-top:20px;
+    margin-top:50px;
 }
 
 .skill-card {
@@ -742,8 +742,10 @@ section {
 /* Hobbies Section */
 .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
+    justify-content: center;
+    margin: 100px auto;
 }
 
 .hobby-card {
@@ -753,6 +755,7 @@ section {
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all var(--transition-normal) ease;
+    width: 250px;
 }
 
 .hobby-card:hover {
